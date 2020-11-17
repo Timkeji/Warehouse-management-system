@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>调货信息</title>
+
+  <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../css/Transfer-info.css" media="all">
+</head>
+
+<body>
+
+  <!-- 你的HTML代码 -->
+  <!-- 头部 -->
+
+   <!-- 头部：标题+返回键 -->
+<div class="app_header">
+    <a href="#" class="back_btn" onclick="back()"><i class="layui-icon  layui-icon-left"></i></a>
+    <a href="" class="title">调货信息</a>
+</div>
+<!-- 按钮：审批+历史 -->
+
+<div class="formtype">
+  
+    <select name="city" id= "city" lay-verify="" class="allform" onchange="category()">
+        <option value="0">A仓库</option>
+        <option value="1">B仓库</option>
+        <option value="2">c仓库</option>
+
+      </select> 
+      <select name="status" id="status"lay-verify="" class="status" onchange="category()">
+        <option value="0">不足</option>
+        <option value="1">充足</option>
+        <option value="2">较充足</option>
+      
+      </select>
+</div>
+<div class="forminformation">
+    <form action="">
+        <div class="layui-form">
+            <table class="layui-table">
+              <colgroup>
+                <col width="100">
+                <col width="300">
+                <col width="150">
+                <col >
+              </colgroup>
+              <thead style="text-align: center;">
+                <tr>
+                  <th>仓库名称</th>
+                  <th>物品名称</th>
+                
+                  <th>商品状态</th>
+                  <th>操作</th>
+                </tr> 
+              </thead>
+              <tbody id = "form">
+                <tr>
+                  <td>101010</td>
+                  <td>索尼耳机</td>
+                  <td><span class="nopass">不充足</span></td>
+                  <td><span   class="approval" onclick="trans()">调货</span></td>
+                </tr>
+                <tr>
+                    <td>101010</td>
+                    <td>实验室仪器设备借用</td>
+                    <td><span class="pass">充足</span></td>
+               
+                    <td><span   class="approval">调货</span></td>
+                  </tr>
+                  <tr>
+                    <td>101010</td>
+                    <td>实验室仪器设备借用</td>
+                    <td><span class="elaf">较充足</span></td>
+                    <td><span   class="approval">调货</span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+    </form>
+</div>
+<div class="moreinfo" id="#transinfo" >
+    <div class="form">
+        <form action="" >
+            <table class="forminfo">
+                <tbody >
+                 
+                    <tr>
+                        <td>调货仓库</td>
+                        <td > <select lay-verify="" class="allform" onchange="category()">
+                            <option value="0">A仓库</option>
+                            <option value="1">B仓库</option>
+                            <option value="2">c仓库</option>
+                    
+                          </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>商品名称</td>
+                        <td ><input type="text" >
+                            <p></p>
+                        </td>
+                    </tr>
+                  
+    
+                    <tr>
+                        <td>数量</td>
+                        <td><input type="text" >
+                            <p></p>
+                        </td>
+                    </tr>
+                
+                 
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+  <!-- js的引用 -->
+  <script src="../"></script>
+  <script src="../layui/layui.all.js"></script>
+  <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../js/page_js/test.js"></script>
+  <script src="../js/page_js/Transfer-info.js"></script>
+</body>
+</html>

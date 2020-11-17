@@ -1,0 +1,38 @@
+{
+  "_from": "dingtalk-jsapi",
+  "_id": "dingtalk-jsapi@2.13.7",
+  "_inBundle": false,
+  "_integrity": "sha512-hjB/+I6eSPFDfmDzzwvxC0ZnWtOHCSScUNEZ5ds7qO313kBfKw+xL8FcLY3OFBoe0bdKavBg+c3t4tncJBTCLg==",
+  "_location": "/dingtalk-jsapi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "dingtalk-jsapi",
+    "name": "dingtalk-jsapi",
+    "escapedName": "dingtalk-jsapi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/dingtalk-jsapi/-/dingtalk-jsapi-2.13.7.tgz",
+  "_shasum": "89d7ca2a9ca587a3f11a77ee14f669e976028877",
+  "_spec": "dingtalk-jsapi",
+  "_where": "/Users/varsion/Desktop/页面存档/DingTalk",
+  "author": {
+    "name": "xihuan"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "promise-polyfill": "^7.1.0"
+  },
+  "deprecated": false,
+  "description": "钉钉 模块化 多端统一 API",
+  "main": "./index.js",
+  "name": "dingtalk-jsapi",
+  "version": "2.13.7"
+}
