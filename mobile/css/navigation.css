@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'iconfont';
+    /* project id 2203413 */
+    src: url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.eot');
+    src: url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.eot?#iefix') format('embedded-opentype'),
+        url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.woff2') format('woff2'),
+        url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.woff') format('woff'),
+        url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.ttf') format('truetype'),
+        url('http://at.alicdn.com/t/font_2203413_7879mpx9wbo.svg#iconfont') format('svg');
+}
+
+
+.iconfont,
+.close-icon,
+.warehouse-icon,
+.warehousing-icon,
+.house-icon,
+.purchase-icon,
+.seasoning-icon,
+.achievements-icon,
+.cancellation-icon,
+.Ghome-index {
+    font-family: "iconfont" !important;
+    font-size: 1rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.close {
+    text-align: right;
+}
+
+.nav-middle ul li a {
+    font-size: 0.64rem;
+    font-family: Microsoft YaHei Regular, Microsoft YaHei Regular-Regular;
+    font-weight: 400;
+    text-align: center;
+    color: #020433;
+    line-height: 36px;
+}
+
+.nav-middle ul li {
+    padding: 0.23rem 0.4rem 0.23rem 1.8rem;
+}
+
+.nav-middle ul li:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.nav-middle ul li i {
+    display: inline-block;
+    width: 0.68rem;
+    height: 0.68rem;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+.Pop-up-Navigation {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background-color: #f7f7f7;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 0.4rem 0 0 0;
+}
+
+.close-icon {
+    color: #ea9518;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.Ghome-index {
+    color: #b61c08;
+}
+
+.warehouse-icon {
+    color: #2aa515;
+}
+
+.warehousing-icon {
+    color: #1195db;
+}
+
+.house-icon {
+    color: #ea9518;
+    font-size: 0.9rem !important;
+}
+
+.purchase-icon {
+    color: #d81e06;
+}
+
+.seasoning-icon {
+    color: #233d5f;
+    font-size: 0.6rem !important;
+}
+
+.achievements-icon {
+    color: #ea9518;
+    font-size: 0.7rem;
+}
+
+.cancellation-icon {
+    color: #333;
+    font-size: 0.7rem;
+}
+
+.current {
+    background-color: rgba(0, 0, 0, .05);
+}

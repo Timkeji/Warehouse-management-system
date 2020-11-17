@@ -76,7 +76,7 @@ html {
   .app_header .title {
     vertical-align: middle;
     margin-top: 0.70833333rem;
-    margin-left: 4rem;
+    margin-left: 4.5rem;
   }
   .app_header .title,
   .app_header .back_btn .layui-icon-left {
@@ -193,9 +193,6 @@ display: none;
   }
   .forminfo>tbody>tr>td>select{
     width: 6.7rem;
-    float: left;
-
-
     background: #ffffff;
     border: 1px solid #c7c8c9;
   }
@@ -286,4 +283,20 @@ display: none;
 
   }
 
+  .outcomemoreinfo {
+    padding: 0.5rem 2rem;
+  }
+  .outcomemoreinfo td:nth-of-type(even) {
+    text-align: center;
+  }
+
+  html,
+body {
+  height: 100%;
+}
+
+.index-img {
+  line-height: 2.49rem;
+  margin-left: 4rem;
+}
   /* 5se */

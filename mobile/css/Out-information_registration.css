@@ -44,7 +44,8 @@ td {
     padding: 0.5rem 0 !important;
 }
 
-.success-alert,.failure-alert {
+.success-alert,
+.failure-alert {
     top: 8rem !important;
 }
 
@@ -110,6 +111,17 @@ td {
     text-align: center;
     margin: 0.16rem 0 -0.35rem;
 }
+
 .range input {
     font-size: 0.5rem;
+}
+
+.app_header .title,
+.app_header .back_btn .layui-icon-left {
+    font-size: 0.7rem;
+    /* font-size: 18px; */
+    font-family: Microsoft YaHei Regular, Microsoft YaHei Regular-Regular;
+    text-align: center;
+    color: #1d1e2c;
+    margin-left: 0rem;
 }

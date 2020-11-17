@@ -1,15 +1,30 @@
+var url=location.search;
+var formid;
+var Request = new Object();
+if(url.indexOf("?")!=-1)
+{
+var str = url.substr(1);
+strs= str.split("&");
+for(var i=0;i<strs.length;i++)
+{
+Request[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+}
+}
+formid= Request["formid"];
 
-
+unwarehouse=(decodeURI(Request["hourse"]));
+proname=(decodeURI(Request["name"]))
+console.log(formid);
+console.log(unwarehouse)
+console.log(proname);
   function trans(){
-
     var $ =layui.jquery;
     layui.use('layer', function(){
         // var $ = layui.jquery
         var layer = layui.layer;
         layer.open({
             type: 1,        
-            content: $('#transinfo'),
-            
+            content: $('#transinfo'),            
 end:function (res) {
     $('#transinfo').css("display",'none');
 },
@@ -55,8 +70,4 @@ end:function (res) {
          
           });
       });  
-  }
-  function category(){
-
-// alert("123")
   }

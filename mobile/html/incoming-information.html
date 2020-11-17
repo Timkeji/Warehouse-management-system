@@ -8,8 +8,14 @@
     <!-- <link rel="stylesheet" href="css/layui.css" media="all"> -->
     <link rel="stylesheet" href="../layui/css/layui.css" media="all">
     <link rel="stylesheet" href="../css/base.css" media="all">
-    <link rel="stylesheet" href="../css/operation-record-inspection.css" media="all">
+    <link rel="stylesheet" href="../css/operation-record-inspection.css">
+    <link rel="stylesheet" href="../css/base-new.css" media="all">
+    <link rel="stylesheet" href="../css/borrow_apply.css" media="all">
+    <link rel="stylesheet" href="../css/Super-administrator-Center.css" media="all">
+    <link rel="stylesheet" href="../css/General-administrator-Center.css" media="all">
     <link rel="stylesheet" href="../css/incoming-information.css" media="all">
+    <!-- 弹出导航 -->
+    <link rel="stylesheet" href="../css/navigation.css" media="all">
 </head>
 
 <body>
@@ -18,51 +24,65 @@
 
     <!-- 头部：标题+返回键 -->
     <div class="app_header">
-        <a href="#" class="back_btn"><i class="layui-icon  layui-icon-left"></i></a>
-        <a href="#" class="title">入库详细信息</a>
+        <a href="#" class="back_btn" onclick="back()"><i class="layui-icon  layui-icon-left"></i></a>
+        <a href="#" class="title">入库登记</a>
+        <a href="#" class="index-img"><i class="iconfont">&#xe634;</i></a>
     </div>
     <!-- 按钮：审批+历史 -->
-  
+    <!-- <div class="app_middle">
+        <div class="app_btn">
+            <a href="experimental-training-center.html">填报</a>
+            <a href="list_forms.html" class="hty_btn">列表</a>
+        </div>
+    </div> -->
     <div class="form">
         <form action="" id="LaboratoryLoan">
             <table>
                 <tbody>
-                
+                    <!-- <tr>
+                        <td>仓库名</td>
+                        <td id="site-name">
+                        <select name="" id="laboratory_name" onchange="hwc_getLaboratory_name()">
+                            <option value="" disabled selected hidden>请选择...</option>
+                        </select>
+                            <p></p>
+                        </td>
+                    </tr> -->
                     <tr>
                         <td>时间</td>
-                        <td id="incometime"><input type="text"  value="" >
+                        <td id="incometime"><input type="text" value="">
                             <p></p>
                         </td>
                     </tr>
                     <tr>
                         <td>派发地点</td>
-           s            <td id="incomefrom"><input type="text" >
-                        <p></p>
+                        <td id="incomefrom"><input type="text">
+                            <p></p>
                         </td>
                     </tr>
                     <tr>
                         <td>仓库名</td>
                         <td id="site-class">
-                            <select name="" >
-                                <option value="" > A仓库</option>
-                                <option value="" > B仓库</option>
+                            <select name="">
+                                <option value=""> A仓库</option>
+                                <option value=""> B仓库</option>
                             </select>
                             <p></p>
                         </td>
                     </tr>
                     <tr>
                         <td>仓库管理员</td>
-                        <td id="incomemsman"><input type="text" >
+                        <td id="incomemsman"><input type="text">
                             <p></p>
                         </td>
                     </tr>
                     <tr>
                         <td>管理员工号</td>
-                        <td id="incomemsmannb"><input type="text"    >
+                        <td id="incomemsmannb"><input type="text">
                             <p></p>
                         </td>
                     </tr>
-                   
+
                     <tr>
                         <td>工人工号</td>
                         <td id="incomemannb"><input type="text" id="">
@@ -83,7 +103,7 @@
                     </tr>
                     <tr>
                         <td>类型</td>
-                        <td  id="incomevary"><input type="text" id="">
+                        <td id="incomevary"><input type="text" id="">
                             <p></p>
                         </td>
                     </tr>
@@ -110,31 +130,31 @@
     </div>
 
     <!-- 成功弹框 -->
-    <div class="layui-layer layui-layer-page success-alert" id="layui-layer2" type="page" times="2" showtime="0" id="successful"
-        contype="string">
+    <div class="layui-layer layui-layer-page success-alert" id="layui-layer2" type="page" times="2" showtime="0"
+        id="successful" contype="string">
         <div id="layerDemoauto" class="layui-layer-content content">
             <div>
                 <div><img src="../icon/icon/ok.png" alt=""></div>
                 <p class="success">表单提交成功</p>
             </div>
         </div>
-        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine" onclick="sucJumpLaborBor()">确定</a></div><span
-            class="layui-layer-resize"></span>
+        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine"
+                onclick="sucJumpLaborBor()">确定</a></div><span class="layui-layer-resize"></span>
     </div>
     <div class="mask">
     </div>
 
     <!-- 失败弹框 -->
-    <div class="layui-layer layui-layer-page failure-alert" id="layui-layer3" type="page" times="2" showtime="0" id="failure"
-         contype="string">
+    <div class="layui-layer layui-layer-page failure-alert" id="layui-layer3" type="page" times="2" showtime="0"
+        id="failure" contype="string">
         <div id="layerDemoauto" class="layui-layer-content content">
             <div>
                 <div><img src="../icon/icon/no.png" alt=""></div>
                 <p class="failure">表单提交失败</p>
             </div>
         </div>
-        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine" onclick="faiJumpLaborBor()">确定</a></div><span
-            class="layui-layer-resize"></span>
+        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine"
+                onclick="faiJumpLaborBor()">确定</a></div><span class="layui-layer-resize"></span>
     </div>
     <div class="mask">
     </div>
@@ -165,13 +185,34 @@
     </div> -->
 
 
+    <!-- 弹出导航 start -->
+    <div class="Pop-up-Navigation">
+        <div class="close"><i class="close-icon">&#xe6aa;</i></div>
+        <div class="nav-middle">
+            <ul>
+                <li><a href="General-administrator-Center.html"><i
+                            class="Ghome-index">&#xe609;</i>首页</a></li>
+                <li><a href="Message-notification.html"><i class="warehouse-icon">&#xe60b;</i>消息通知</a></li>
+                <li><a href="Out-information_registration.html"><i class="warehousing-icon">&#xe61d;</i>出库登记</a></li>
+                <li class="current"><a href="incoming-information.html"><i class="house-icon">&#xe620;</i>入库登记</a></li>
+                <li><a href="Access-details.html"><i class="purchase-icon">&#xe63f;</i>出入库详情</a></li>
+                <li><a href="general-login.html"><i class="cancellation-icon">&#xe62a;</i>注销</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 弹出导航 emd -->
+
+    <!-- 蒙版 start -->
+    <div class="mask"></div>
+    <!-- 蒙版 end -->
+
 </body>
-    <!-- js的引用 -->
-   
+<!-- js的引用 -->
+<script src="../layui/layui.all.js"></script>
+<script src="../js/jquery-1.12.3.js"></script>
+<script src="../js/page_js/incoming-information.js"></script>
 <script src="../js/jquery-1.12.3.js"></script>
 <script src="../js/page_js/fill.js"></script>
- <script src="../layui/layui.all.js"></script>
-    <script src="../js/jquery-1.12.3.js"></script>
-    <script src="../js/page_js/incoming-information.js"></script>
+<script src="../js/page_js/navigation.js"></script>
 
 </html>

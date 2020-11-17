@@ -7,8 +7,10 @@
     <title>进货信息</title>
 
     <link rel="stylesheet" href="../layui/css/layui.css" media="all">
-
+    <link rel="stylesheet" href="../css/borrow_apply.css" media="all">
     <link rel="stylesheet" href="../css/Instock-information.css" media="all">
+    <!-- 弹出导航 -->
+    <link rel="stylesheet" href="../css/navigation.css" media="all">
 </head>
 
 <body>
@@ -20,9 +22,10 @@
     <div class="app_header">
         <a href="#" class="back_btn" onclick="back()"><i class="layui-icon  layui-icon-left"></i></a>
         <a href="" class="title">进货信息</a>
+        <a href="#" class="index-img"><i class="iconfont">&#xe634;</i></a>
     </div>
 
- 
+
     <div class="forminformation">
         <form action="">
             <div class="layui-form">
@@ -37,22 +40,13 @@
                         <tr>
                             <th>产品名称</th>
                             <th>数量</th>
-                            <th>仓库</th>                          
+                            <th>仓库</th>
                             <th>超管工号</th>
                             <th>仓管姓名</th>
                         </tr>
                     </thead>
                     <tbody id="form">
-                        <tr>
-                            <td>101010</td>
-                            <td>b仓库</td>
-                            <td><span class="nopass">不足</span></td>
-                            <td>b仓库</td>
-                            <td>b仓库</td>
-                            <!-- <td><a href="#"><span class="layui-btn layui-btn-radius layui-btn-normal layui-btn-xs chakan">查看</span></a></td> -->
-                   
-                        </tr>
-                    
+                        
 
                     </tbody>
                 </table>
@@ -61,33 +55,33 @@
     </div>
 
     </div>
-    <div class="outcomemoreinfo" style="display: none;" >
+    <div class="outcomemoreinfo" style="display: none;">
         <div class="form">
-            <form action="" >
+            <form action="">
                 <table class="forminfo">
                     <tbody>
 
                         <tr>
                             <td>时间</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓库名</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓管名字</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓管工号</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
@@ -99,100 +93,124 @@
                         </tr>
                         <tr>
                             <td>商品名称</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>数量</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>产品编号</td>
-                            <td ><input type="text" value="">
+                            <td><input type="text" value="">
                                 <p></p>
                             </td>
                         </tr>
-                     
-                      
+
+
                     </tbody>
                 </table>
             </form>
         </div>
     </div>
-    <div class="sureinfo" >
+    <div class="sureinfo">
         <div class="form">
-            <form action="" >
+            <form action="">
                 <table class="forminfo">
                     <tbody>
 
                         <tr>
                             <td>时间</td>
-                            <td >
+                            <td>
                                 <p>123</p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓库名</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓管名字</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓管工号</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>仓管电话</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>商品名称</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
                         <tr>
                             <td>数量</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>产品编号</td>
-                            <td >
+                            <td>
                                 <p></p>
                             </td>
                         </tr>
-                     
-                      
+
+
                     </tbody>
                 </table>
             </form>
         </div>
     </div>
 
-    <!-- js的引用 -->
+    <!-- 弹出导航 start -->
+    <div class="Pop-up-Navigation">
+        <div class="close"><i class="close-icon">&#xe6aa;</i></div>
+        <div class="nav-middle">
+            <ul>
+                <li><a href="S"><i class="Ghome-index">&#xe609;</i>首页</a></li>
+                <li><a href="Out-information_look.html"><i class="warehouse-icon">&#xe602;</i>出库信息</a></li>
+                <li><a href="incoming-information-look.html"><i class="warehousing-icon">&#xe657;</i>入库信息</a></li>
+                <li><a href="Warehouse-information.html"><i class="house-icon">&#xe67f;</i>仓库信息</a></li>
+                <li class="current"><a href="Instock-information.html"><i class="purchase-icon">&#xe603;</i>进货信息</a></li>
+                <li><a href="Transfer-info.html"><i class="seasoning-icon">&#xe7cd;</i>调货信息</a></li>
+                <li><a href="achievements.html"><i class="achievements-icon">&#xe619;</i>绩效信息</a></li>
+                <li><a href="super-login.html"><i class="cancellation-icon">&#xe62a;</i>注销</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 弹出 -->
+    <!-- 弹出导航 emd -->
 
-    <script src="../layui/layui.all.js"></script>
-    <script src="../layui/lay/modules/jquery.js"></script>
-    <script src="../js/page_js/test.js"></script>
-    <script src="../js/jquery-1.12.3.js"></script>
-    <script src="../js/page_js/Instock-information.js"></script>
+    <!-- 蒙版 start -->
+    <div class="mask"></div>
+    <!-- 蒙版 end -->
+
 </body>
+<!-- js的引用 -->
+
+<script src="../layui/layui.all.js"></script>
+<script src="../layui/lay/modules/jquery.js"></script>
+<script src="../js/page_js/test.js"></script>
+<script src="../js/jquery-1.12.3.js"></script>
+<script src="../js/page_js/Instock-information.js"></script>
+<script src="../js/page_js/navigation.js"></script>
 
 </html>
