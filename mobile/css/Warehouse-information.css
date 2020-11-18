@@ -159,12 +159,17 @@ body {
 }
 
 .formtype>select {
-  width: 3rem;
+  width: 5rem;
   float: left;
-  margin-left: 6rem;
+  margin-left: 5rem;
   margin-top: 1rem;
   background: #ffffff;
   border: 1px solid #c7c8c9;
+
+}
+td>select{
+width: 6rem;
+border: 1px solid #c7c8c9;
 }
 
 .layui-table td,
@@ -197,6 +202,7 @@ body {
 .info {
   width: 10px;
 }
+
 
 td {
   width: 25%;
@@ -232,7 +238,7 @@ td {
 }
 
 .forminfo>tbody>tr>td>p {
-  width: 3rem;
+  width: 5rem;
 }
 
 .trsfor {
