@@ -39,74 +39,51 @@
         <form action="" id="LaboratoryLoan">
             <table>
                 <tbody>
-                    <!-- <tr>
-                        <td>仓库名</td>
-                        <td id="site-name">
-                        <select name="" id="laboratory_name" onchange="hwc_getLaboratory_name()">
-                            <option value="" disabled selected hidden>请选择...</option>
+                <tr>
+                    <td>仓库名</td>
+                    <td id="site-class">
+                        <select name="warehouse_name" id="warehouse_name">
+                            <!--                                <option value=""> A仓库</option>-->
+                            <!--                                <option value=""> B仓库</option>-->
                         </select>
-                            <p></p>
-                        </td>
-                    </tr> -->
-                    <tr>
-                        <td>时间</td>
-                        <td id="incometime"><input type="text" value="">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>派发地点</td>
-                        <td id="incomefrom"><input type="text">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>仓库名</td>
-                        <td id="site-class">
-                            <select name="">
-                                <option value=""> A仓库</option>
-                                <option value=""> B仓库</option>
-                            </select>
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>仓库管理员</td>
-                        <td id="incomemsman"><input type="text">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>管理员工号</td>
-                        <td id="incomemsmannb"><input type="text">
-                            <p></p>
-                        </td>
-                    </tr>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>工人工号</td>
+                    <td id="incomemannb"><input type="text" id="worker_id" name="worker_id" value="">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>产品名字</td>
+                    <td id="incomeitname"><input type="text" id="product_name" name="product_name" value="">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>产品编号</td>
+                    <td id="incomevary"><input type="text" id="product_id" name="product_id" value="">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数量</td>
+                    <td id="incomeitnb"><input type="text" id="product_num" name="product_num" value="">
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>派发地点</td>
+                    <td id="incomefrom"><input type="text" id="company" name="company" value="">
+                        <p></p>
+                    </td>
 
-                    <tr>
-                        <td>工人工号</td>
-                        <td id="incomemannb"><input type="text" id="">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>产品名字</td>
-                        <td id="incomeitname"><input type="text" id="">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>数量</td>
-                        <td id="incomeitnb"><input type="text" id="">
-                            <p></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>类型</td>
-                        <td id="incomevary"><input type="text" id="">
-                            <p></p>
-                        </td>
-                    </tr>
+                </tr>
+
+
+
+
                     <!-- <tr>
                         <td>具体使用时间</td>
                         <td class="range" id="site-range">
@@ -121,7 +98,7 @@
                     <tr class="btn1">
                         <td colspan="2" class="btn">
                             <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal" id="btn"
-                                type="button">提交</button>
+                                type="button" onclick="tijiao()">提交</button>
                         </td>
                     </tr>
                 </tbody>
@@ -129,60 +106,8 @@
         </form>
     </div>
 
-    <!-- 成功弹框 -->
-    <div class="layui-layer layui-layer-page success-alert" id="layui-layer2" type="page" times="2" showtime="0"
-        id="successful" contype="string">
-        <div id="layerDemoauto" class="layui-layer-content content">
-            <div>
-                <div><img src="../icon/icon/ok.png" alt=""></div>
-                <p class="success">表单提交成功</p>
-            </div>
-        </div>
-        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine"
-                onclick="sucJumpLaborBor()">确定</a></div><span class="layui-layer-resize"></span>
-    </div>
-    <div class="mask">
-    </div>
 
-    <!-- 失败弹框 -->
-    <div class="layui-layer layui-layer-page failure-alert" id="layui-layer3" type="page" times="2" showtime="0"
-        id="failure" contype="string">
-        <div id="layerDemoauto" class="layui-layer-content content">
-            <div>
-                <div><img src="../icon/icon/no.png" alt=""></div>
-                <p class="failure">表单提交失败</p>
-            </div>
-        </div>
-        <div class="layui-layer-btn layui-layer-btn-c"><a class="layui-layer-btn0 determine"
-                onclick="faiJumpLaborBor()">确定</a></div><span class="layui-layer-resize"></span>
-    </div>
-    <div class="mask">
-    </div>
 
-    <!-- 承诺弹框 -->
-    <!-- <div class="layui-layer layui-layer-page site" id="layui-layer8" type="page" times="8" showtime="0"
-        contype="string">
-        <div class="layui-layer-title" style="cursor: move;">承诺</div>
-        <div id="layerDemoauto" class="layui-layer-content">
-            <div class="promise-content">
-                <p>1. 借用教师为借用期间实验室安全
-                    责任人，必须保证实验室的安全。
-                    切实履行实验室用电用水防盗防火
-                    安全。对实验人员进行安全教育，
-                    保证实验室人员人身安全。<br>
-                    2. 对实验人员进行必要仪器使用和
-                    实验技能指导、实验操作教育，保
-                    证实验操作规范及设备正常。<br>
-                    3. 督促实验人员按时完成实验项目。
-                    我已阅知实验室安全责任要求，保
-                    证切实履行实验室安全责任。
-                </p>
-            </div>
-        </div>
-        <div class="layui-layer-btn layui-layer-btn-c"><button class="layui-layer-btn0 cancel">取消</button><button
-                href="" class="layui-layer-btn0 nocancel" type="button" onclick="hwc_LaboratoryLoan()">确定</button></div><span
-            class="layui-layer-resize"></span>
-    </div> -->
 
 
     <!-- 弹出导航 start -->
@@ -211,8 +136,7 @@
 <script src="../layui/layui.all.js"></script>
 <script src="../js/jquery-1.12.3.js"></script>
 <script src="../js/page_js/incoming-information.js"></script>
-<script src="../js/jquery-1.12.3.js"></script>
-<script src="../js/page_js/fill.js"></script>
+
 <script src="../js/page_js/navigation.js"></script>
 
 </html>

@@ -31,23 +31,7 @@
         <a href="list_forms.html" class="hty_btn">列表</a>
     </div>
 </div> -->
-  <div class="formtype">
-    <input type="text" name="import" id="import" placeholder="搜索表单" class="searchform">
 
-    <span class="layui-icon layui-icon-search " id="btn01"></span>
-    <select name="city" id="city" lay-verify="" class="allform" onchange="category()">
-      <option value="0">入库</option>
-      <option value="1">出库</option>
-
-
-    </select>
-    <!-- <select name="status" id="status"lay-verify="" class="status" onchange="category()">
-        <option value="0">所有状态</option>
-        <option value="1">审批中</option>
-        <option value="2">审批未通过</option>
-        <option value="3">通过审批</option>
-      </select> -->
-  </div>
   <div class="forminformation">
     <form action="">
       <div class="layui-form">
@@ -72,15 +56,8 @@
               <td>b仓库</td>
               <td><span>入库</span></td>
               <!-- <td><a href="#"><span class="layui-btn layui-btn-radius layui-btn-normal layui-btn-xs chakan">查看</span></a></td> -->
-              <td class="info"><span class="pass" onclick="moreinfo()">详情</span><span class="nopass" onclick="remove()">
-                  删除</span></td>
+              <td class="info"><span class="pass" onclick="moreinfo()">详情</span></td>
 
-            </tr>
-            <tr>
-              <td>101010</td>
-              <td>b仓库</td>
-              <td><span>出库</span></td>
-              <td class="info"><span class="pass">详情</span><span class="nopass"> 删除</span></td>
             </tr>
 
           </tbody>
@@ -88,12 +65,11 @@
       </div>
     </form>
   </div>
-  <div class="outcomemoreinfo" style="display: none;">
+  <div class="outcomemoreinfo"style="display: none">
     <div>
       <form action="" id="">
         <table>
           <tbody class="forminfo">
-
             <tr>
               <td>时间</td>
               <td>
@@ -150,7 +126,6 @@
               </td>
             </tr>
 
-
           </tbody>
 
         </table>
@@ -182,10 +157,12 @@
 <!-- js的引用 -->
 
 <script src="../layui/layui.all.js"></script>
-<script src="../js/jquery-1.12.3.js"></script>
 <script src="../layui/lay/modules/jquery.js"></script>
 <script src="../js/page_js/test.js"></script>
-<script src="../js/page_js/Access-details.js"></script>
+
+<script src="../js/jquery-1.12.3.js"></script>
+
 <script src="../js/page_js/navigation.js"></script>
+<script src="../js/page_js/Access-details.js"></script>
 
 </html>
