@@ -150,7 +150,6 @@ $(document).ready(function (){
             yes:function(index,layero){
                 layer.close(layer.index)
 
-
             },
           });
       });
@@ -160,4 +159,6 @@ $(document).ready(function (){
               console.log('错误')
           }
       })
+
     }
+
