@@ -54,15 +54,7 @@ $(document).ready(function (){
             console.log('错误')
         }
     })
-
-
-
-
 })
-
-
-
-
   function moreinfo(a){
       console.log($(a).parent().parent().children().eq(0).text())
       var id = $(a).parent().parent().children().eq(0).text();
@@ -137,12 +129,12 @@ $(document).ready(function (){
               if (data.code == 100){
                   console.log("fail")
               }
-
     layui.use('layer', function(){
         var $ = layui.jquery
         var layer = layui.layer;
         layer.open({
             type: 1,
+
             content: $ ('.outcomemoreinfo'),
 
             end:function (res) {
@@ -155,13 +147,7 @@ $(document).ready(function (){
             btn: ['确定'],
             yes:function(index,layero){
                 layer.close(layer.index)
-
             },
-
-            // anim: 6,
-
-
-
           });
       });
           },
@@ -170,11 +156,11 @@ $(document).ready(function (){
               console.log('错误')
           }
       })
-
-
-
-     
   }
   function category(){
-
   }
+        });
+    });
+
+}
+
