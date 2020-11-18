@@ -120,6 +120,7 @@ function tijiao() {
             if (data.code == 200){
                 console.log('success')
                 alert("提交成功")
+                window.location.href = "General-administrator-Center"
             }
             if (data.code == 100){
                 console.log("fail")

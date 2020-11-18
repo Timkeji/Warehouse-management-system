@@ -15,21 +15,21 @@
 
 <body>
 
-  <!-- 你的HTML代码 -->
-  <!-- 头部 -->
+<!-- 你的HTML代码 -->
+<!-- 头部 -->
 
-  <!-- 头部：标题+返回键 -->
-  <div class="app_header">
-    <a href="#" class="back_btn" onclick="back()"><i class="layui-icon  layui-icon-left"></i></a>
-    <a href="" class="title">出入库详情信息</a>
-    <a href="#" class="index-img"><i class="iconfont">&#xe634;</i></a>
+<!-- 头部：标题+返回键 -->
+<div class="app_header">
+  <a href="#" class="back_btn" onclick="back()"><i class="layui-icon  layui-icon-left"></i></a>
+  <a href="" class="title">出入库详情信息</a>
+  <a href="#" class="index-img"><i class="iconfont">&#xe634;</i></a>
+</div>
+<!-- 按钮：审批+历史 -->
+<!-- <div class="app_middle">
+  <div class="app_btn">
+      <a href="experimental-training-center.html" class="fill_btn">填报</a>
+      <a href="list_forms.html" class="hty_btn">列表</a>
   </div>
-  <!-- 按钮：审批+历史 -->
-  <!-- <div class="app_middle">
-    <div class="app_btn">
-        <a href="experimental-training-center.html" class="fill_btn">填报</a>
-        <a href="list_forms.html" class="hty_btn">列表</a>
-    </div>
 </div> -->
 
   <div class="forminformation">
@@ -57,80 +57,74 @@
               <td><span>入库</span></td>
               <!-- <td><a href="#"><span class="layui-btn layui-btn-radius layui-btn-normal layui-btn-xs chakan">查看</span></a></td> -->
               <td class="info"><span class="pass" onclick="moreinfo()">详情</span></td>
-
             </tr>
-
           </tbody>
         </table>
       </div>
     </form>
-  </div>
-  <div class="outcomemoreinfo"style="display: none">
-    <div>
-      <form action="" id="">
-        <table>
-          <tbody class="forminfo">
-            <tr>
-              <td>时间</td>
-              <td>
-                <p>123</p>
-              </td>
-            </tr>
-
-            <tr>
-              <td>发送地点</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>仓库名</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>仓库管理员</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>仓库管理员工号</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>工人工号</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>产品名字</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>数量</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-            <tr>
-              <td>类型</td>
-              <td>
-                <p></p>
-              </td>
-            </tr>
-
-          </tbody>
-
-        </table>
-      </form>
-    </div>
+  </div> 
+<div class="outcomemoreinfo" style="display: none;">
+  <div>
+    <form action="" id="">
+      <table>
+        <tbody class="forminfo">
+        <tr>
+          <td>时间</td>
+          <td>
+            <p>123</p>
+          </td>
+        </tr>
+        <tr>
+          <td>发送地点</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>仓库名</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>仓库管理员</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>仓库管理员工号</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>工人工号</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>产品名字</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>数量</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <td>类型</td>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
   </div>
   </div>
   <!-- 弹出导航 start -->
@@ -143,15 +137,17 @@
         <li><a href="Out-information_registration.html"><i class="warehousing-icon">&#xe61d;</i>出库登记</a></li>
         <li><a href="incoming-information.html"><i class="house-icon">&#xe620;</i>入库登记</a></li>
         <li class="current"><a href="Access-details.html"><i class="purchase-icon">&#xe63f;</i>出入库详情</a></li>
-        <li><a href="general-login.html"><i class="cancellation-icon">&#xe62a;</i>注销</a></li>
+        <li><a onclick="logout()"><i class="cancellation-icon">&#xe62a;</i>注销</a></li>
       </ul>
     </div>
-  </div>
-  <!-- 弹出导航 emd -->
 
-  <!-- 蒙版 start -->
-  <div class="mask"></div>
-  <!-- 蒙版 end -->
+  </div>
+</div>
+<!-- 弹出导航 emd -->
+
+<!-- 蒙版 start -->
+<div class="mask"></div>
+<!-- 蒙版 end -->
 
 </body>
 <!-- js的引用 -->
@@ -159,10 +155,9 @@
 <script src="../layui/layui.all.js"></script>
 <script src="../layui/lay/modules/jquery.js"></script>
 <script src="../js/page_js/test.js"></script>
-
 <script src="../js/jquery-1.12.3.js"></script>
-
 <script src="../js/page_js/navigation.js"></script>
 <script src="../js/page_js/Access-details.js"></script>
-
+<script src="../js/Check_login1.js"></script>
+<script src="../js/logout1.js"></script>
 </html>

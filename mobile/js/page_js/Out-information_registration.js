@@ -1,6 +1,6 @@
 var SERVER_PATH = 'http://project.phonbe.cn/'
-// var userToken = window.localStorage.getItem("yq_token");
-var userToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wcm9qZWN0LnBob25iZS5jblwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNTYwNzgzOCwiZXhwIjoxNjA1NjExNDM4LCJuYmYiOjE2MDU2MDc4MzgsImp0aSI6IlNxWHJPZjNMZU44U1BXd2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktX5ZcMBV4jnYfr0VIMrYX7uIGHKTvAjW2MBb5oABAI'
+ var userToken = window.localStorage.getItem("yq_token");
+// var userToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wcm9qZWN0LnBob25iZS5jblwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNTYwNzgzOCwiZXhwIjoxNjA1NjExNDM4LCJuYmYiOjE2MDU2MDc4MzgsImp0aSI6IlNxWHJPZjNMZU44U1BXd2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktX5ZcMBV4jnYfr0VIMrYX7uIGHKTvAjW2MBb5oABAI'
 $(function () {
     $('#btn').on('click', function () {
         if ($('#outcometime input').val() == '' || $('#outcometime input').val() == null) {
@@ -117,6 +117,7 @@ function tijiao1() {
             if (data.code == 200){
                 console.log('success')
                 alert("提交成功")
+                window.location.href = "General-administrator-Center.html"
             }
             if (data.code == 100){
                 console.log("fail")
