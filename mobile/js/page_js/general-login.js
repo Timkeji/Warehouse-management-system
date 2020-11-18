@@ -1,5 +1,16 @@
 var SERVER_PATH = 'http://project.phonbe.cn'
+
+$(document).ready(function (){
+    var userToken = window.localStorage.getItem("yq_token");
+    if (userToken !=0){
+       window.location.href = "General-administrator-Center.html"
+    }
+})
+
 $(function() {
+
+
+
     $('#general-login').on('click', function() {
         if($('#gaccount').val() == '' || $('#gaccount').val() == null) {
             alert('工号不得为空！')

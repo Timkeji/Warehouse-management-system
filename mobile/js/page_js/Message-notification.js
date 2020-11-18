@@ -88,7 +88,7 @@ function trincomeinfo(a) {
             <tr>
               <td>仓库管理员工号</td>
               <td>
-                <p>${data.data[0].super_id}</p>
+                <p>${data.data[0].management_id}</p>
               </td>
             </tr>
             <tr>
@@ -98,7 +98,7 @@ function trincomeinfo(a) {
               </td>
             </tr>
              
-                        
+                     
               `
         tab.empty()
 
@@ -150,6 +150,7 @@ function trincomeinfo(a) {
                 },
                 dataType: "json",
                 success: function (data) {
+                  console.log(data)
                   if (data.code == 200) {
 
                     alert("消息接收成功")

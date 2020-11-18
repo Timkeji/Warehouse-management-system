@@ -1,4 +1,11 @@
 var SERVER_PATH = 'http://project.phonbe.cn'
+
+$(document).ready(function (){
+    var userToken = window.localStorage.getItem("yq_token");
+    if (userToken !=0){
+        window.location.href = "Super-administrator-Center.html"
+    }
+})
 $(function() {
     $('#super-button').on('click', function() {
         if($('#account').val() == '' || $('#paw').val() == null) {

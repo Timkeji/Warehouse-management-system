@@ -55,9 +55,11 @@ $(document).ready(function (){
         }
     })
 })
+
   function moreinfo(a){
       console.log($(a).parent().parent().children().eq(0).text())
       var id = $(a).parent().parent().children().eq(0).text();
+
 
       $.ajax({
           async: false,
@@ -147,6 +149,7 @@ $(document).ready(function (){
             btn: ['确定'],
             yes:function(index,layero){
                 layer.close(layer.index)
+
             },
           });
       });
@@ -156,11 +159,6 @@ $(document).ready(function (){
               console.log('错误')
           }
       })
-  }
-  function category(){
-  }
-        });
-    });
 
-}
+    }
 
