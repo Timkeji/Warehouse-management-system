@@ -1,5 +1,6 @@
-var SERVER_PATH = 'http://bread.varsion.cn/'
-var code = '123456'  //该js需要code
+var SERVER_PATH = 'http://project.phonbe.cn/'
+ var userToken = window.localStorage.getItem("yq_token");
+// var userToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wcm9qZWN0LnBob25iZS5jblwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwNTYwNzgzOCwiZXhwIjoxNjA1NjExNDM4LCJuYmYiOjE2MDU2MDc4MzgsImp0aSI6IlNxWHJPZjNMZU44U1BXd2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ktX5ZcMBV4jnYfr0VIMrYX7uIGHKTvAjW2MBb5oABAI'
 $(function () {
     $('#btn').on('click', function () {
         if ($('#incometime input').val() == '' || $('#incometime input').val() == null) {
@@ -58,25 +59,10 @@ $(function () {
 
 
 
-        if ($('input').val() != '' && $('input').val() != null) {
-            $('.mask').show();
-            $('.site').show();
-        }
+
 
     })
-    $('.cancel').on('click', function () {
-        $('.mask').hide();
-        $('.site').hide();
-    })
-    $('.nocancel').on('click', function () {
-        $('.site').hide();
 
-    })
-    $(".determine").on('click', function () {
-        $('.success-alert').hide();
-        $('.failure-alert').hide();
-        $('.mask').hide();
-    })
 
 
 })
@@ -86,3 +72,62 @@ $(function () {
  * 请求接口 api/fill/filllabnamedis
  * @author huweichen <github.com/nathaniel-kk>
  */
+
+
+$(document).ready(function (){
+    $.get(SERVER_PATH+'api/superadmin/wareinformationdrop',function (data){
+        console.log(data)
+        let Str = ''
+        if (data.code == 200){
+            Str = `<select id="warehouse_name" name="warehouse_name" >`
+            for (var i = 0;i < data.data.length;i++){
+                Str += `
+                              <option value="${data.data[i].name}">${data.data[i].name}</option>
+                         
+                  `
+            }
+            Str +=`</select>`
+            $('#site-class').empty().append(Str)
+        }
+    })
+
+})
+
+function tijiao() {
+    var a = document.getElementById('product_name').value;
+    var b = document.getElementById('warehouse_name').value;
+    var c = document.getElementById('worker_id').value;
+    var d = document.getElementById('product_id').value;
+    var e = document.getElementById('product_num').value;
+    var f = document.getElementById('company').value;
+    $.ajax({
+        async: false,
+        type: 'POST',
+        url: SERVER_PATH+'api/lowadmin/writeinventory',
+        data: {
+            warehouse_name:b,
+            worker_id:c,
+            product_name:a,
+            product_id:d,
+            product_num:e,
+            company:f,
+            token:userToken
+        },
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+        datatype: 'json',
+        success:function (data){
+            console.log(data)
+            if (data.code == 200){
+                console.log('success')
+                alert("提交成功")
+            }
+            if (data.code == 100){
+                console.log("fail")
+            }
+        },
+        error:function (data){
+            alert('错误')
+            console.log('错误')
+        }
+    })
+}
